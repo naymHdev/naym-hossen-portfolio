@@ -22,13 +22,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto max-w-7xl px-6 md:px-10`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className=" grid grid-cols-1 md:grid-cols-5">
           <div className=" border-r col-span-full md:col-span-2 h-screen">
             <Sidebar />
           </div>
-          <div className="col-span-full md:col-span-3 overflow-auto overflow-y-scroll h-screen overflow-x-hidden no-scrollbar">
+          <div className="col-span-full md:col-span-3 overflow-auto overflow-y-scroll h-screen overflow-x-hidden no-scrollbar p-10">
             {children}
           </div>
         </div>

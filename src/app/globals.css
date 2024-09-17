@@ -30,3 +30,8 @@ body {
     text-wrap: balance;
   }
 }
+
+.custom-bg {
+  border: 1px solid #10acf4;
+  border-radius: 7px;
+}

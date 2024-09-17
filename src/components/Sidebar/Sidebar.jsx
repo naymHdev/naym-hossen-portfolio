@@ -1,22 +1,11 @@
-import Image from "next/image";
-import logo from "../../public/images/naym-logo.png";
 import NavMenus from "./NavMenus";
 import Link from "next/link";
 
 const Sidebar = () => {
   return (
     <>
-      <section className="py-6">
-        {/* <div className=" flex items-center justify-center">
-          <Image
-            src={logo}
-            hight={250}
-            width={250}
-            priority
-            alt="Naym Hossen Portfolio Image"
-          />
-        </div> */}
-        <div className="mt-6">
+      <section className="p-10 mx-auto max-w-7xl">
+        <div className="">
           <Link href="/">
             <h1 className=" text-6xl font-extrabold text-title">Naym Hossen</h1>
           </Link>
