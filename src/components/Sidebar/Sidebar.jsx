@@ -22,7 +22,7 @@ const Sidebar = () => {
                 Get my resume
               </a>
             </button>
-            <div className="border-b-2 group-hover:border-b-primaryColor w-12 group-hover:w-[125px] mt-[2px] transition-all duration-300" />
+            <div className="border-b-2 border-b-title group-hover:border-b-primaryColor w-12 group-hover:w-[125px] mt-[2px] transition-all duration-300" />
           </div>
         </div>
         <div>
