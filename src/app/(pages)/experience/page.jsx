@@ -1,9 +1,12 @@
-
+import Loading from "@/components/Loading/Loading";
+import { Suspense } from "react";
 
 const Experience = () => {
   return (
     <>
-      <div></div>
+      <Suspense fallback={<Loading />}>
+        <div></div>
+      </Suspense>
     </>
   );
 };
