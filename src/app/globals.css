@@ -4,17 +4,17 @@
 
 :root {
   --background: #121c23;
-  --cardGround: #1c262d;
+  --card: #1c262d;
   --foreground: #829aae;
-  --titleColor: #9fbad0;
+  --title: #9fbad0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #121c23;
-    --cardGround: #1c262d;
+    --card: #1c262d;
     --foreground: #ededed;
-    --titleColor: #ffffff;
+    --title: #ffffff;
   }
 }
 
