@@ -7,6 +7,7 @@
   --card: #1c262d;
   --foreground: #829aae;
   --title: #9fbad0;
+  --primaryColor: #10acf4;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,22 +1,33 @@
 import Link from "next/link";
 import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
+import GetInTouch from "../GetInTouch/GetInTouch";
 
 const NavMenus = () => {
   return (
     <>
       <div className="">
         <div className="grid space-y-3 mt-12 text-title font-semibold">
-          <Link href="/about">About</Link>
-          <Link href="/experience">Experience</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/skills">Skills</Link>
-          <Link href="/blogs">Blogs</Link>
+          <Link href="/about" className="hover:text-primaryColor">
+            About
+          </Link>
+          <Link href="/experience" className="hover:text-primaryColor">
+            Experience
+          </Link>
+          <Link href="/projects" className="hover:text-primaryColor">
+            Projects
+          </Link>
+          <Link href="/skills" className="hover:text-primaryColor">
+            Skills
+          </Link>
+          <Link href="/blogs" className="hover:text-primaryColor">
+            Blogs
+          </Link>
         </div>
       </div>
 
       {/* contact us section */}
-      <section className=" mt-32">
-        <div className="flex items-center space-x-4">
+      <section className=" mt-32 flex items-center justify-between">
+        <div className="flex items-center space-x-6">
           <a
             href="https://github.com/naymHdev"
             target="_blank"
@@ -45,6 +56,9 @@ const NavMenus = () => {
           >
             <FaWhatsapp className="text-2xl text-[#35d2bf]" />
           </a>
+        </div>
+        <div>
+          <GetInTouch />
         </div>
       </section>
     </>
