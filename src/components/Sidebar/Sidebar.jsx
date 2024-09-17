@@ -16,6 +16,14 @@ const Sidebar = () => {
             Full Stack Developer with 1+ years of MERN stack expertise, building
             responsive, scalable web applications.
           </p>
+          <div className="group">
+            <button className=" text-primaryColor font-extrabold text-lg mt-6">
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                Get my resume
+              </a>
+            </button>
+            <div className="border-b-2 group-hover:border-b-primaryColor w-12 group-hover:w-[125px] mt-[2px] transition-all duration-300" />
+          </div>
         </div>
         <div>
           <NavMenus />

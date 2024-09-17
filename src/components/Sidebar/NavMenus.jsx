@@ -6,7 +6,7 @@ const NavMenus = () => {
   return (
     <>
       <div className="">
-        <div className="grid space-y-3 mt-20 text-title font-semibold">
+        <div className="grid space-y-3 mt-16 text-title font-semibold">
           <Link href="/about" className="hover:text-primaryColor">
             <div className="group flex items-center gap-3">
               <p className="text-base group-hover:text-primaryColor">About</p>
@@ -45,7 +45,7 @@ const NavMenus = () => {
       </div>
 
       {/* contact us section */}
-      <section className=" mt-24 flex items-center justify-between">
+      <section className=" mt-20 flex items-center justify-between">
         <div className="flex items-center space-x-6">
           <a
             className="hover:-mt-10 transition-all duration-300"
