@@ -6,29 +6,49 @@ const NavMenus = () => {
   return (
     <>
       <div className="">
-        <div className="grid space-y-3 mt-12 text-title font-semibold">
+        <div className="grid space-y-3 mt-20 text-title font-semibold">
           <Link href="/about" className="hover:text-primaryColor">
-            About
+            <div className="group flex items-center gap-3">
+              <p className="text-base group-hover:text-primaryColor">About</p>
+              <div className="border-b border-b-primaryColor w-10 group-hover:w-20 transition-all duration-300" />
+            </div>
           </Link>
           <Link href="/experience" className="hover:text-primaryColor">
-            Experience
+            <div className="group flex items-center gap-3">
+              <p className="text-base group-hover:text-primaryColor">
+                Experience
+              </p>
+              <div className="border-b border-b-primaryColor w-10 group-hover:w-20 transition-all duration-300" />
+            </div>
           </Link>
-          <Link href="/projects" className="hover:text-primaryColor">
-            Projects
+          <Link href="/projects" className="hover:text-primaryColor group">
+            <div className="group flex items-center gap-3">
+              <p className="text-base group-hover:text-primaryColor">
+                Projects
+              </p>
+              <div className="border-b border-b-primaryColor w-10 group-hover:w-20 transition-all duration-300" />
+            </div>
           </Link>
           <Link href="/skills" className="hover:text-primaryColor">
-            Skills
+            <div className="group flex items-center gap-3">
+              <p className="text-base group-hover:text-primaryColor">Skills</p>
+              <div className="border-b border-b-primaryColor w-10 group-hover:w-20 transition-all duration-300" />
+            </div>
           </Link>
           <Link href="/blogs" className="hover:text-primaryColor">
-            Blogs
+            <div className="group flex items-center gap-3">
+              <p className="text-base group-hover:text-primaryColor">Blogs</p>
+              <div className="border-b border-b-primaryColor w-10 group-hover:w-20 transition-all duration-300" />
+            </div>
           </Link>
         </div>
       </div>
 
       {/* contact us section */}
-      <section className=" mt-32 flex items-center justify-between">
+      <section className=" mt-24 flex items-center justify-between">
         <div className="flex items-center space-x-6">
           <a
+            className="hover:-mt-10 transition-all duration-300"
             href="https://github.com/naymHdev"
             target="_blank"
             rel="noopener noreferrer"
@@ -36,6 +56,7 @@ const NavMenus = () => {
             <FaGithub className="text-2xl" />
           </a>
           <a
+            className="hover:-mt-10 transition-all duration-300"
             href="https://www.linkedin.com/in/naymhdev"
             target="_blank"
             rel="noopener noreferrer"
@@ -43,6 +64,7 @@ const NavMenus = () => {
             <FaLinkedin className="text-2xl text-[#31b6f4]" />
           </a>
           <a
+            className="hover:-mt-10 transition-all duration-300"
             href="https://web.facebook.com/naymHdev"
             target="_blank"
             rel="noopener noreferrer"
@@ -50,6 +72,7 @@ const NavMenus = () => {
             <FaFacebook className="text-2xl text-[#3572f5]" />
           </a>
           <a
+            className="hover:-mt-10 transition-all duration-300"
             href="https://wa.me/8801770064053"
             target="_blank"
             rel="noopener noreferrer"
