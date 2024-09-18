@@ -14,3 +14,8 @@
 .slick-next {
   z-index: 1;
 }
+
+.skeleton {
+  background: #ededed;
+  border-radius: 10px;
+}
