@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className=" grid grid-cols-1 md:grid-cols-5">
+        <div className=" grid grid-cols-1 md:grid-cols-5 border border-primaryColor">
           <div className="col-span-full md:col-span-2 h-screen">
             <Sidebar />
           </div>
