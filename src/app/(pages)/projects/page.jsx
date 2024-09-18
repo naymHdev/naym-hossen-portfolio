@@ -6,9 +6,6 @@ import { Suspense } from "react";
 const Projects = () => {
   return (
     <>
-    <>
-    projectDetails/[slug]/page.jsx
-    </>
       <RouteTitle firstP="My" secondP="Projects" />
       <Suspense fallback={<Loading />}>
         <div className="mt-14">

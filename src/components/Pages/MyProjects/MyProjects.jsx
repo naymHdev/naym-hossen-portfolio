@@ -2,6 +2,7 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { projectsData } from "@/data/projects";
 import CardImage from "./CardImage";
+import Link from "next/link";
 
 const MyProjects = () => {
   return (
@@ -29,6 +30,13 @@ const MyProjects = () => {
               <p className="m-2 font-medium text-foreground text-lg">
                 {project?.details}
               </p>
+              <div className="flex flex-grow-0 justify-end bottom-0">
+                <Link href={`/project/${encodeURIComponent(project.id)}`}>
+                  <button className="text-primaryColor font-bold text-lg">
+                    See Project
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         ))}

@@ -1,5 +1,6 @@
 export const projectsData = [
   {
+    id: 1,
     projectName: "Hilf Al Fudul",
     details:
       "A Charity Platform. Browse a curated list of charitable organizations tackling important issues.",
@@ -46,6 +47,7 @@ export const projectsData = [
     },
   },
   {
+    id: 2,
     projectName: "Online Translator",
     details:
       "Delta Translator is a collaborative effort to develop a user-friendly language translation platform.",
@@ -96,6 +98,7 @@ export const projectsData = [
     },
   },
   {
+    id: 3,
     projectName: "Fintex Fitness",
     details:
       "Log exercises, set personalized goals, and apply for a dedicated trainer. Seamlessly monitor progress, celebrate achievements, and stay motivated on your path to a healthier lifestyle.",
@@ -138,6 +141,7 @@ export const projectsData = [
     },
   },
   {
+    id: 4,
     projectName: "Web Works Wizards",
     details:
       "This project aims to streamline IT service requests, incident management, and resource allocation within organizations, enhancing operational efficiency and customer satisfaction.",
