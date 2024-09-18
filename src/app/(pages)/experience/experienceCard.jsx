@@ -9,6 +9,7 @@ const ExperienceCard = ({ itm }) => {
     technologyUsed,
     projectsName,
   } = itm || {};
+
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-6 gap-4 border-b py-6">

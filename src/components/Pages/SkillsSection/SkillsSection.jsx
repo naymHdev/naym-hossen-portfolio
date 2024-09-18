@@ -42,14 +42,9 @@ const SkillsSection = () => {
   }
 
   return (
-    <motion.div
-      className="py-8"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
+    <motion.div variants={containerVariants} initial="hidden" animate="visible">
       {skillsIcons.map((category, index) => (
-        <div key={index} className="mb-8">
+        <div key={index}>
           <h2 className="text-2xl font-bold mb-6 mt-8 md:mt-20 capitalize text-title">
             {category.category}
           </h2>
@@ -58,7 +53,7 @@ const SkillsSection = () => {
               <motion.div
                 key={i}
                 variants={itemVariants}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center group"
               >
                 <div className="bg-card hover:bg-[#122b3c] custom-bg rounded-lg p-6">
                   <Image
