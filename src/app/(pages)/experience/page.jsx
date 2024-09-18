@@ -2,18 +2,15 @@ import Loading from "@/components/Loading/Loading";
 import { experience } from "@/data/experience";
 import { Suspense } from "react";
 import ExperienceCard from "./experienceCard";
+import RouteTitle from "@/components/RouteTitle";
 
 const Experience = () => {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <div>
-          <h2 className="text-4xl font-semibold text-title">
-            My Work <span className="text-primaryColor">Experience</span>
-          </h2>
-        </div>
+        <RouteTitle firstP="My Work" secondP="Experience" />
         <section className="mt-14">
-          <div>
+          <div className="">
             {experience?.map((itm, index) => (
               <ExperienceCard key={index} itm={itm} />
             ))}

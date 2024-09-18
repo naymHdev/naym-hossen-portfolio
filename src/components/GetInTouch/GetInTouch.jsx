@@ -1,5 +1,6 @@
 "use client";
-import { MdMail, MdOutlineClose } from "react-icons/md";
+import { MdOutlineClose } from "react-icons/md";
+import { BsMailbox } from "react-icons/bs";
 import { FaPenFancy } from "react-icons/fa";
 const GetInTouch = () => {
   return (
@@ -8,7 +9,7 @@ const GetInTouch = () => {
         className=" text-primaryColor font-extrabold text-xl flex items-center gap-2"
         onClick={() => document.getElementById("my_modal_5").showModal()}
       >
-        <MdMail className="text-2xl" />
+        <BsMailbox className="text-2xl" />
         Get in touch
       </button>
       <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">

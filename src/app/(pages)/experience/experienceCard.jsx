@@ -11,7 +11,7 @@ const ExperienceCard = ({ itm }) => {
   } = itm || {};
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-4 border-b py-6">
         <section className="col-span-full md:col-span-2">
           <div>
             <h3 className="text-xl font-bold text-title mb-6">{jobTitle}</h3>
@@ -29,7 +29,7 @@ const ExperienceCard = ({ itm }) => {
         <section className="col-span-full md:col-span-4">
           <div>
             <p className=" font-medium text-foreground">{experienceDetails}</p>
-            <h3 className="font-bold text-left from-foreground mt-10">
+            <h3 className="font-bold text-left from-foreground mt-6 md:mt-10">
               Technology Used
             </h3>
             <div className="flex flex-wrap gap-1 mt-2">
@@ -41,7 +41,7 @@ const ExperienceCard = ({ itm }) => {
                 </div>
               ))}
             </div>
-            <h3 className="font-bold text-left from-foreground mt-10">
+            <h3 className="font-bold text-left from-foreground mt-6 md:mt-10">
               Projects
             </h3>
             <div className="flex flex-wrap gap-1 mt-2">
