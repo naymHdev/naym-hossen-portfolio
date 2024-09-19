@@ -2,6 +2,7 @@
 import CardImage from "@/components/Pages/MyProjects/CardImage";
 import { projectsData } from "@/data/projects";
 import { useParams } from "next/navigation";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 // import { FaArrowsToDot, FaCircleArrowRight } from "react-icons/fa6";
 import { IoArrowRedoCircle } from "react-icons/io5";
 
@@ -53,6 +54,41 @@ const ProjectDetails = () => {
                     </button>
                   </div>
                 ))}
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl font-extrabold text-primaryColor mt-10 mb-6">
+                Source Code
+              </h2>
+              <div className="flex items-center gap-8 text-xl font-bold text-title">
+                {project.links.frontend && (
+                  <>
+                    <a
+                      className="flex items-center gap-3"
+                      href={project.links.frontend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub />
+                      Frontend
+                      <FaExternalLinkAlt className="text-primaryColor text-sm" />
+                    </a>
+                  </>
+                )}
+                {project.links.backend && (
+                  <>
+                    <a
+                      className="flex items-center gap-3"
+                      href={project.links.backend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub />
+                      Backend
+                      <FaExternalLinkAlt className="text-primaryColor text-sm" />
+                    </a>
+                  </>
+                )}
               </div>
             </div>
           </div>
