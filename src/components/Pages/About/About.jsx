@@ -4,6 +4,8 @@ import ItemLayout from "@/components/ItemLayout/ItemLayout";
 import Link from "next/link";
 
 const About = () => {
+  
+
   return (
     <>
       <section className="grid grid-cols-12 gap-4 xs:gap-6  md:gap-8 w-full mt-12">
@@ -58,6 +60,7 @@ const About = () => {
           </Link>
         </ItemLayout>
       </section>
+     
     </>
   );
 };

@@ -1,6 +1,6 @@
 export const skillsIcons = [
   {
-    category: "frontEnd",
+    category: "frontend",
     skills: [
       {
         name: "HTML",
@@ -53,7 +53,7 @@ export const skillsIcons = [
     ],
   },
   {
-    category: "backEnd",
+    category: "backend",
     skills: [
       {
         name: "Node.js",

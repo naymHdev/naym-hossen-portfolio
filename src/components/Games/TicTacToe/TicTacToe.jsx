@@ -45,11 +45,11 @@ const TicTacToe = () => {
   // Conditional status message
   let status;
   if (winner === "X") {
-    status = "Congrats! You Won!";
+    status = "Congrats! You Won! 😎";
   } else if (winner === "O") {
-    status = "You Lost!";
+    status = "You Lost! 🥱";
   } else if (!board.includes(null)) {
-    status = "It's a draw!";
+    status = "It's a draw! 🤝";
   } else {
     status = isXNext ? "My turn" : "Your turn";
   }

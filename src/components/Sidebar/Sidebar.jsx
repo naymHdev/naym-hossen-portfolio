@@ -4,7 +4,7 @@ import Link from "next/link";
 const Sidebar = () => {
   return (
     <>
-      <section className="p-10 mx-auto max-w-7xl">
+      <section className="p-5 md:p-10 mx-auto max-w-7xl">
         <div className="">
           <Link href="/">
             <h1 className=" text-6xl font-extrabold text-title">Naym Hossen</h1>
