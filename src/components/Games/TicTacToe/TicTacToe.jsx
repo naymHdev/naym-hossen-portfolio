@@ -1,11 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
-import toast from "react-hot-toast";
 
 const TicTacToe = () => {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [isXNext, setIsXNext] = useState(true); // X starts
-  const [message, setMessage] = useState("");
 
   useEffect(() => {
     if (!isXNext && !calculateWinner(board)) {
@@ -40,27 +38,24 @@ const TicTacToe = () => {
   const handleReset = () => {
     setBoard(Array(9).fill(null));
     setIsXNext(true);
-    setMessage("");
   };
 
   const winner = calculateWinner(board);
-  const status = winner
-    ? `Winner: ${winner}`
-    : `Next player: ${isXNext ? "X" : "O"}`;
 
-  useEffect(() => {
-    if (winner) {
-      toast(`${winner} wins!`, { type: "success" });
-      setMessage(`${winner} wins!`);
-    } else if (!board.includes(null)) {
-      setMessage("It's a draw!");
-    } else {
-      setMessage("");
-    }
-  }, [winner, board]);
+  // Conditional status message
+  let status;
+  if (winner === "X") {
+    status = "Congrats! You Won!";
+  } else if (winner === "O") {
+    status = "You Lost!";
+  } else if (!board.includes(null)) {
+    status = "It's a draw!";
+  } else {
+    status = isXNext ? "My turn" : "Your turn";
+  }
 
   return (
-    <div className="flex flex-col items-center mt-10">
+    <div className="flex flex-col items-center mt-6">
       <div className="grid grid-cols-3 gap-1">
         {board.map((value, index) => (
           <button
@@ -73,15 +68,21 @@ const TicTacToe = () => {
           </button>
         ))}
       </div>
-      <div className="mt-4">
-        <button
-          onClick={handleReset}
-          className="px-4 py-2 bg-red-500 text-white rounded"
-        >
-          Reset
-        </button>
-      </div>
-      <div className="mt-4 text-lg font-semibold">{message}</div>
+      <div className="mt-9 font-semibold text-title text-sm">{status}</div>
+      {(winner || !board.includes(null)) && (
+        <div className="mt-4">
+          <button
+            onClick={handleReset}
+            className="px-4 py-2 bg-card custom-bg font-medium text-primaryColor"
+          >
+            Reset
+          </button>
+        </div>
+      )}
+
+      <p className="text-center mt-10 text-sm font-medium text-foreground italic">
+        Built with Next.js and Tailwind
+      </p>
     </div>
   );
 };

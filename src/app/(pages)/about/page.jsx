@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <div className=" grid grid-cols-1 md:grid-cols-7 gap-3">
+        <div className=" grid grid-cols-1 md:grid-cols-7 gap-4">
           <div className="col-span-full md:col-span-4">
             <p className=" text-foreground font-medium font-mono">
               My journey in web development is driven by a diverse range of
@@ -21,6 +21,12 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="col-span-full md:col-span-3">
+            <div className="text-start">
+              <h1 className="text-xl mb-1 font-bold text-title">Lets play</h1>
+              <h1 className="text-4xl mb-5 font-bold text-primaryColor">
+                Tic tac toe
+              </h1>
+            </div>
             <TicTacToe />
           </div>
         </div>
