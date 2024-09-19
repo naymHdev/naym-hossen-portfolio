@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import Loading from "@/components/Loading/Loading";
 import About from "@/components/Pages/About/About";
+import TicTacToe from "@/components/Games/TicTacToe/TicTacToe";
 const AboutUs = () => {
   return (
     <>
@@ -20,6 +21,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="col-span-full md:col-span-3">
+            <TicTacToe />
           </div>
         </div>
         <section className="mt-16 flex items-center gap-4">

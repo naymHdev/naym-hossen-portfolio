@@ -76,7 +76,7 @@ const Sudoku = () => {
   return (
     <>
       <div className="text-start mt-14">
-        <h1 className="text-xl mb-2 font-bold">Let's play</h1>
+        <h1 className="text-xl mb-2 font-bold text-title">Let's play</h1>
         <h1 className="text-4xl mb-5 font-bold text-primaryColor">
           Sudoku Game
         </h1>
@@ -89,7 +89,7 @@ const Sudoku = () => {
                 key={`${rowIndex}-${colIndex}`}
                 value={cell}
                 onChange={(e) => handleInputChange(e, rowIndex, colIndex)}
-                className="w-10 h-10 text-center border-none focus:outline-none bg-card custom-bg"
+                className="w-10 h-10 text-center text-title border-none focus:outline-none bg-card custom-bg"
                 maxLength={1}
               />
             ))
@@ -103,13 +103,16 @@ const Sudoku = () => {
             Validate
           </button>
           <button
-            className="bg-card text-primaryColor custom-bg px-4 py-2 rounded"
+            className="bg-card text-red-500 custom-bg px-4 py-2 rounded"
             onClick={resetGame}
           >
             Reset
           </button>
         </div>
       </div>
+      <p className="text-center mt-10 text-sm font-semibold text-foreground italic">
+        Built with Next.js and Tailwind
+      </p>
     </>
   );
 };
