@@ -3,6 +3,7 @@ import { experience } from "@/data/experience";
 import { Suspense } from "react";
 import ExperienceCard from "./experienceCard";
 import RouteTitle from "@/components/RouteTitle";
+import Sudoku from "@/components/Games/Sudoku/Sudoku";
 
 const Experience = () => {
   return (
@@ -16,6 +17,7 @@ const Experience = () => {
             ))}
           </div>
         </section>
+        <Sudoku />
       </Suspense>
     </>
   );

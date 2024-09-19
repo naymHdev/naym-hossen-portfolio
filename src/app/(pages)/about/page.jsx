@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <div className=" grid grid-cols-1 md:grid-cols-6 gap-1 items-center">
+        <div className=" grid grid-cols-1 md:grid-cols-7 gap-3">
           <div className="col-span-full md:col-span-4">
             <p className=" text-foreground font-medium font-mono">
               My journey in web development is driven by a diverse range of
@@ -19,7 +19,8 @@ const AboutUs = () => {
               the future of web development.
             </p>
           </div>
-          <div className="col-span-full md:col-span-2"></div>
+          <div className="col-span-full md:col-span-3">
+          </div>
         </div>
         <section className="mt-16 flex items-center gap-4">
           <div>
