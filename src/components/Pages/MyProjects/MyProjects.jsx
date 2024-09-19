@@ -31,7 +31,9 @@ const MyProjects = () => {
                 {project?.details}
               </p>
               <div className="flex flex-grow-0 justify-end bottom-0">
-                <Link href={`/project/${encodeURIComponent(project.id)}`}>
+                <Link
+                  href={`/project/${encodeURIComponent(project.projectName)}`}
+                >
                   <button className="text-primaryColor font-bold text-lg">
                     See Project
                   </button>

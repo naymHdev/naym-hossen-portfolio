@@ -1,17 +1,64 @@
 "use client";
+import CardImage from "@/components/Pages/MyProjects/CardImage";
 import { projectsData } from "@/data/projects";
 import { useParams } from "next/navigation";
+// import { FaArrowsToDot, FaCircleArrowRight } from "react-icons/fa6";
+import { IoArrowRedoCircle } from "react-icons/io5";
 
 const ProjectDetails = () => {
   const { projectId } = useParams();
+  const cleanName = decodeURIComponent(projectId);
 
-  const projects = projectsData?.filter((project) => project.id == projectId);
-  console.log("projects__", projects);
+  const projects = projectsData?.filter(
+    (project) => project.projectName == cleanName
+  );
+  // console.log("projects__", projects);
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold">Project: {projectId}</h1>
-    </div>
+    <>
+      <h1 className="text-6xl font-extrabold text-title">{cleanName}</h1>
+      <section>
+        {projects?.map((project) => (
+          <div key={project.id}>
+            <p className="text-foreground font-medium font-mono text-lg mt-3">
+              {project.details}
+            </p>
+            <div className="mt-10">
+              <CardImage images={project.images} details={project.details} />
+            </div>
+            <div>
+              <h2 className="text-4xl font-extrabold text-primaryColor mt-10 mb-6">
+                Key Features
+              </h2>
+              {project.keyFeatures.map((features, index) => (
+                <div key={index + 1}>
+                  <ul className="mt-4 text-foreground font-medium">
+                    <li className=" flex gap-3">
+                      <IoArrowRedoCircle className="text-title text-xl" />
+                      {features}
+                    </li>
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div>
+              <h2 className="text-4xl font-extrabold text-primaryColor mt-10 mb-6">
+                Technologies
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech, index) => (
+                  <div key={index}>
+                    <button className="px-3 py-1 text-primaryColor bg-card custom-bg transition-all hover:bg-[#061a2a]">
+                      {tech}
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </section>
+    </>
   );
 };
 

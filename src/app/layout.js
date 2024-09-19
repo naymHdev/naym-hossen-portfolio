@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
           <div className="col-span-full md:col-span-2 h-screen">
             <Sidebar />
           </div>
-          <div className="col-span-full md:col-span-3 mt-3 overflow-auto overflow-y-scroll h-screen overflow-x-hidden no-scrollbar p-10">
+          <div className="col-span-full md:col-span-3 mt-2 overflow-auto overflow-y-scroll h-screen overflow-x-hidden no-scrollbar p-10">
             {children}
           </div>
         </div>
