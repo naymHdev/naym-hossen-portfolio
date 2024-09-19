@@ -11,10 +11,10 @@ const MyProjects = () => {
         {projectsData?.map((project, index) => (
           <div
             key={index}
-            className=" border border-primaryColor bg-card custom-bg"
+            className="border border-primaryColor bg-card custom-bg h-full flex flex-col"
           >
             <CardImage images={project.images} details={project.details} />
-            <div className="p-3">
+            <div className="p-3 flex-grow flex flex-col">
               <div className="flex items-center gap-3">
                 <h2 className="text-2xl font-bold text-title">
                   {project?.projectName}
@@ -30,12 +30,13 @@ const MyProjects = () => {
               <p className="m-2 font-medium text-foreground text-lg">
                 {project?.details}
               </p>
-              <div className="flex flex-grow-0 justify-end bottom-0">
+
+              <div className="mt-auto flex justify-end">
                 <Link
                   href={`/project/${encodeURIComponent(project.projectName)}`}
                 >
-                  <button className="text-primaryColor font-bold text-lg">
-                    See Project
+                  <button className="text-primaryColor font-extrabold text-sm bg-card border-none custom-bg px-3 py-2">
+                    Full Details
                   </button>
                 </Link>
               </div>
