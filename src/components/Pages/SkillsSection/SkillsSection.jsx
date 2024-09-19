@@ -45,7 +45,7 @@ const SkillsSection = () => {
     <motion.div variants={containerVariants} initial="hidden" animate="visible">
       {skillsIcons.map((category, index) => (
         <div key={index}>
-          <h2 className="text-2xl font-bold mb-6 mt-8 md:mt-20 capitalize text-title">
+          <h2 className="text-2xl font-bold mb-6 mt-8 md:mt-14 capitalize text-title">
             {category.category}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">

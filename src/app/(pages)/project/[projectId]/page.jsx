@@ -23,9 +23,40 @@ const ProjectDetails = () => {
         <section>
           {projects?.map((project) => (
             <div key={project.id}>
-              <p className="text-foreground font-medium font-mono text-lg mt-3">
-                {project.details}
-              </p>
+              <div>
+                <p className="text-foreground font-medium text-lg mt-3">
+                  {project.details}
+                </p>
+
+                {/* Project metadata */}
+                <div className="mt-8 space-y-2">
+                  <p className="font-bold text-title">
+                    Role:
+                    <span className="font-medium text-foreground px-1">
+                      {project.metadata.role}
+                    </span>
+                  </p>
+                  <p className="font-bold text-title">
+                    Duration:{" "}
+                    <span className="font-medium text-foreground px-1">
+                      {project.metadata.duration}
+                    </span>
+                  </p>
+                  <p className="font-bold text-title">
+                    Completion Date:
+                    <span className="font-medium text-foreground px-1">
+                      {project.metadata.completionDate}
+                    </span>
+                  </p>
+                  <p className="font-bold text-title">
+                    Team Size:{" "}
+                    <span className="font-medium text-foreground px-1">
+                      {project.metadata.teamSize}
+                    </span>
+                  </p>
+                </div>
+              </div>
+
               <div className="mt-10">
                 <CardImage images={project.images} details={project.details} />
               </div>
