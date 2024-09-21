@@ -3,6 +3,7 @@ import "./globals.css";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer/Footer";
+import Navbar from "@/components/Sidebar/MobileNavbar/Navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -45,11 +46,16 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className=" grid grid-cols-1 md:grid-cols-5 border border-primaryColor">
-          <div className="col-span-full md:col-span-2 h-screen">
-            <Sidebar />
+        <div className=" grid grid-cols-1 lg:grid-cols-5 border border-primaryColor">
+          <div className="col-span-full lg:col-span-2 lg:h-screen">
+            <div className="hidden lg:flex">
+              <Sidebar />
+            </div>
+            <div className="lg:hidden flex">
+              <Navbar />
+            </div>
           </div>
-          <div className="col-span-full md:col-span-3 mt-2 overflow-auto overflow-y-scroll h-screen overflow-x-hidden no-scrollbar p-5 md:p-10">
+          <div className="col-span-full lg:col-span-3 mt-2 overflow-auto overflow-y-scroll h-screen overflow-x-hidden no-scrollbar p-5 lg:p-10">
             {children}
             <Footer />
           </div>
