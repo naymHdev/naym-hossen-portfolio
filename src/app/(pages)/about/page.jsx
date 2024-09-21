@@ -2,11 +2,15 @@ import { Suspense } from "react";
 import Loading from "@/components/Loading/Loading";
 import About from "@/components/Pages/About/About";
 import TicTacToe from "@/components/Games/TicTacToe/TicTacToe";
+import MobileDeviceAbout from "./mobileDeviceAbout";
 const AboutUs = () => {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <div className=" grid grid-cols-1 md:grid-cols-7 gap-4">
+        <div className="md:hidden flex">
+          <MobileDeviceAbout />
+        </div>
+        <div className=" grid grid-cols-1 md:grid-cols-7 gap-4 mt-16 md:mt-0">
           <div className="col-span-full md:col-span-4">
             <p className=" text-foreground font-medium font-mono">
               My journey in web development is driven by a diverse range of

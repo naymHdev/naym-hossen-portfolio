@@ -6,10 +6,10 @@ const GetInTouch = () => {
   return (
     <>
       <button
-        className=" text-primaryColor font-extrabold text-xl flex items-center gap-2"
+        className=" text-primaryColor font-semibold md:font-extrabold md:text-xl flex items-center gap-2"
         onClick={() => document.getElementById("my_modal_5").showModal()}
       >
-        <BsMailbox className="text-2xl" />
+        <BsMailbox className="  md:text-2xl" />
         Get in touch
       </button>
       <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">

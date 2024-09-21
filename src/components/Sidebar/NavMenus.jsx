@@ -84,7 +84,7 @@ const NavMenus = () => {
         </div>
       </div>
 
-      {/* contact us section */}
+      {/* contact us section with social icon */}
       <section className=" mt-20 flex items-center justify-between">
         <div className="flex items-center space-x-6">
           <a
