@@ -1,51 +1,15 @@
 "use client";
 import GetInTouch from "@/components/GetInTouch/GetInTouch";
-import { useState } from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
-import Logo from "../../../../public/images/naym-logo.png";
 
 const MobileDeviceAbout = () => {
-  const [loading, setLoading] = useState(true);
-
-  const handleLoad = () => {
-    setLoading(false);
-  };
-
   return (
     <>
       <section>
         <div>
-          <div>
-            <div className="relative w-64 h-64">
-              {loading && (
-                <motion.div
-                  className="absolute inset-0 bg-gray-200 animate-pulse"
-                  initial={{ opacity: 1 }}
-                  animate={{ opacity: 0.5 }}
-                  exit={{ opacity: 0 }}
-                />
-              )}
-              <motion.div
-                className="absolute inset-0"
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.5, delay: loading ? 0 : 0.2 }}
-              >
-                <Image
-                  src={Logo}
-                  height="250"
-                  width="250"
-                  alt="Naym Hossen Portfolio Profile Image"
-                  onLoad={handleLoad}
-                />
-              </motion.div>
-            </div>
-          </div>
           <Link href="/">
-            <h1 className=" text-4xl md:text-6xl font-extrabold text-title mt-6">
+            <h1 className=" text-4xl md:text-6xl font-extrabold text-title">
               Naym Hossen
             </h1>
           </Link>
