@@ -46,12 +46,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className=" grid grid-cols-1 lg:grid-cols-5 border border-primaryColor">
+        <div className=" grid grid-cols-1 md:grid-cols-5 border border-primaryColor">
           <div className="col-span-full lg:col-span-2 lg:h-screen">
-            <div className="hidden lg:flex">
+            <div className="hidden md:flex">
               <Sidebar />
             </div>
-            <div className="lg:hidden flex">
+            <div className="md:hidden flex">
               <Navbar />
             </div>
           </div>
