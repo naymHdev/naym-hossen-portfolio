@@ -25,7 +25,7 @@ const MyProjects = () => {
               .map((_, index) => (
                 <div
                   key={index}
-                  className="border border-primaryColor bg-card custom-bg h-full flex flex-col animate-pulse"
+                  className=" bg-card  h-full flex flex-col animate-pulse"
                 >
                   {/* Skeleton for the image */}
                   <div className="bg-gray-300 h-64 w-full rounded-md"></div>
