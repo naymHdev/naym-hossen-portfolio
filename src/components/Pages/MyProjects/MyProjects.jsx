@@ -12,8 +12,8 @@ const MyProjects = () => {
     // Simulate a delay to show the skeleton (e.g., 2 seconds)
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // Adjust time based on your needs
-    return () => clearTimeout(timer); // Clean up the timer on component unmount
+    }, 2000);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -28,7 +28,7 @@ const MyProjects = () => {
                   className="border border-primaryColor bg-card custom-bg h-full flex flex-col animate-pulse"
                 >
                   {/* Skeleton for the image */}
-                  <div className="bg-gray-300 h-64 w-full"></div>
+                  <div className="bg-gray-300 h-64 w-full rounded-md"></div>
 
                   {/* Skeleton for text and button */}
                   <div className="p-3 flex-grow flex flex-col">
