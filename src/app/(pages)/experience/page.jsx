@@ -10,7 +10,7 @@ const Experience = () => {
     <>
       <Suspense fallback={<Loading />}>
         <RouteTitle firstP="My Work" secondP="Experience" />
-        <section className="mt-14">
+        <section className="mt-4 sm:mt-6 lg:mt-10">
           <div className="">
             {experience?.map((itm, index) => (
               <ExperienceCard key={index} itm={itm} />
