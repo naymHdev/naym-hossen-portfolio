@@ -36,7 +36,7 @@ const ExperienceCard = ({ itm }) => {
             <div className="flex flex-wrap gap-1 mt-2">
               {technologyUsed?.map((tech, index) => (
                 <div key={index}>
-                  <button className="px-4 py-1 text-sm font-thin bg-card text-primaryColor rounded-full">
+                  <button className="px-4 py-1 text-sm font-medium bg-card text-primaryColor custom-bg">
                     {tech}
                   </button>
                 </div>

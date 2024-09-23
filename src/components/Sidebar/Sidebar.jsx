@@ -7,7 +7,7 @@ const Sidebar = () => {
       <section className="p-5 lg:p-10 mx-auto max-w-7xl">
         <div className="">
           <Link href="/">
-            <h1 className=" text-3xl lg:text-6xl font-extrabold text-title">
+            <h1 className="font-ubuntu text-3xl lg:text-6xl font-extrabold text-title">
               Naym Hossen
             </h1>
           </Link>

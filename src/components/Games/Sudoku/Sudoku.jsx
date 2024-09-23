@@ -82,7 +82,7 @@ const Sudoku = () => {
         </h1>
       </div>
       <div className="flex flex-col items-center mt-10">
-        <div className="grid grid-cols-9 gap-1">
+        <div className="grid grid-cols-7 md:grid-cols-9 gap-1">
           {board.map((row, rowIndex) =>
             row.map((cell, colIndex) => (
               <input

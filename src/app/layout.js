@@ -8,12 +8,17 @@ import Navbar from "@/components/Sidebar/MobileNavbar/Navbar";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
-  weight: "100 900",
+  weight: "100 700 900",
 });
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+const geistUbuntu = localFont({
+  src: "./fonts/UbuntuSans-VariableFont_wdth,wght.ttf",
+  variable: "--font-geist-ubuntu",
+  weight: "100 800",
 });
 
 export const metadata = {
@@ -44,9 +49,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${geistUbuntu.variable} antialiased`}
       >
-        <div className=" grid grid-cols-1 md:grid-cols-5 border border-primaryColor">
+        <div className=" grid grid-cols-1 md:grid-cols-5">
           <div className="col-span-full lg:col-span-2 lg:h-screen">
             <div className="hidden md:flex">
               <Sidebar />

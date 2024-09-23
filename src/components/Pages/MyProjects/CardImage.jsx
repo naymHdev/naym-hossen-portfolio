@@ -67,14 +67,14 @@ const CardImage = ({ images, details }) => {
       {loading ? (
         // DaisyUI Skeleton loader
         <div className="grid grid-cols-1 gap-4">
-          <div className="h-[400px] w-full md:h-full skeleton animate-pulse bg-base-300"></div>
+          <div className=" w-full h-full skeleton animate-pulse bg-card"></div>
         </div>
       ) : (
         <div className="slider-container">
           <Slider {...settings}>
             {images.map((img, index) => (
               <div key={index}>
-                <div className="relative md:h-full h-[400px]">
+                <div className="relative h-full ">
                   <img
                     className="w-full h-full object-cover object-center"
                     src={img}
