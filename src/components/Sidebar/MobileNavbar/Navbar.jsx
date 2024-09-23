@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <>
-      <footer className="fixed bottom-0 w-full bg-card py-4 z-50">
+      <footer className="fixed bottom-0 w-full bg-card py-3 z-50">
         <nav className="flex justify-center space-x-8">
           {navRoutes.map((navItem, index) => (
             <a
