@@ -12,7 +12,7 @@ const ExperienceCard = ({ itm }) => {
   } = itm || {};
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-6 gap-4 p-3">
+    <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
       {/* Job Title and Company Info */}
       <section className="col-span-full md:col-span-2">
         <div>

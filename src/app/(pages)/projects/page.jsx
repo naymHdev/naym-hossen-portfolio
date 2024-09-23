@@ -8,7 +8,7 @@ const Projects = () => {
     <>
       <RouteTitle firstP="My" secondP="Projects" />
       <Suspense fallback={<Loading />}>
-        <div className="mt-14">
+        <div className="mt-4 sm:mt-6 lg:mt-10">
           <MyProjects />
         </div>
       </Suspense>

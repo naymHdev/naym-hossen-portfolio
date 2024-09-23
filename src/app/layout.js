@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
             <div className="hidden md:flex py-4 sm:py-6 lg:py-8">
               <Sidebar />
             </div>
-            <div className="md:hidden flex py-4 sm:py-6 lg:py-8">
+            <div className="md:hidden flex ">
               <Navbar />
             </div>
           </div>

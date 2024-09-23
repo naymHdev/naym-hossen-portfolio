@@ -44,18 +44,22 @@ const SkillsSection = () => {
   return (
     <motion.div variants={containerVariants} initial="hidden" animate="visible">
       {skillsIcons.map((category, index) => (
-        <div key={index}>
-          <h2 className="text-2xl font-bold mb-6 mt-8 md:mt-14 capitalize text-title">
+        <div key={index} className="mb-8">
+          {/* Category Heading */}
+          <h2 className="text-xl sm:text-2xl font-bold mt-4 mb-3 capitalize text-title">
             {category.category}
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+
+          {/* Grid Layout for Skills */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
             {category.skills.map((skill, i) => (
               <motion.div
                 key={i}
                 variants={itemVariants}
                 className="flex flex-col items-center group"
               >
-                <div className="bg-card hover:bg-[#122b3c] custom-bg rounded-lg p-6">
+                {/* Icon Container */}
+                <div className="bg-card hover:bg-[#122b3c] custom-bg rounded-lg p-4 sm:p-6 transition-all">
                   <Image
                     src={skill.icon}
                     alt={skill.name}
@@ -63,7 +67,9 @@ const SkillsSection = () => {
                     height={50}
                   />
                 </div>
-                <p className="mt-3 text-lg font-semibold text-title group-hover:text-primaryColor">
+
+                {/* Skill Name */}
+                <p className="mt-3 text-base sm:text-lg font-semibold text-title group-hover:text-primaryColor">
                   {skill.name}
                 </p>
               </motion.div>
