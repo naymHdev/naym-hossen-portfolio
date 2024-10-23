@@ -23,19 +23,16 @@ const MyProjects = () => {
           ? Array(4)
               .fill(0)
               .map((_, index) => (
-                <div
-                  key={index}
-                  className=" bg-card  h-full flex flex-col animate-pulse"
-                >
+                <div key={index} className="h-full flex flex-col animate-pulse">
                   {/* Skeleton for the image */}
-                  <div className="bg-gray-300 h-64 w-full rounded-md"></div>
+                  <div className="bg-[#122b3c] h-64 w-full rounded-md"></div>
 
                   {/* Skeleton for text and button */}
                   <div className="p-3 flex-grow flex flex-col">
-                    <div className="h-6 bg-gray-300 w-3/4 mb-2 rounded"></div>
-                    <div className="h-4 bg-gray-300 w-1/2 mb-4 rounded"></div>
+                    <div className="h-6 bg-[#122b3c] w-3/4 mb-2 rounded"></div>
+                    <div className="h-4 bg-[#122b3c] w-1/2 mb-4 rounded"></div>
                     <div className="mt-auto flex justify-end">
-                      <div className="h-10 w-24 bg-gray-300 rounded"></div>
+                      <div className="h-10 w-24 bg-[#122b3c] rounded"></div>
                     </div>
                   </div>
                 </div>
@@ -59,8 +56,12 @@ const MyProjects = () => {
                       <FaExternalLinkAlt className="text-primaryColor text-lg" />
                     </a>
                   </div>
-                  <p className="m-2 font-medium text-foreground text-lg">
-                    {project?.details}
+                  <p className="my-2 font-medium text-foreground">
+                    {project?.details?.length > 150
+                      ? project.details.slice(0, 150) + "..."
+                      : project?.details?.length < 10
+                      ? "Details not available"
+                      : project.details}
                   </p>
 
                   <div className="mt-auto flex justify-end">

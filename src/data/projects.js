@@ -44,6 +44,7 @@ export const projectsData = [
       liveLink: "https://hilful-fujul-client.vercel.app",
       frontend: "https://github.com/naymHdev/Hilful-Fujul-Client",
       backend: "https://github.com/naymHdev/Hilf-Al-Fudul-Server",
+      nextJS: "",
     },
   },
   {
@@ -95,10 +96,56 @@ export const projectsData = [
       liveLink: "https://delta-translator-ac8d6.web.app",
       frontend: "https://github.com/deltatranslator/translator-delta-client",
       backend: "https://github.com/deltatranslator/translator-delta-server",
+      nextJS: "",
     },
   },
   {
     id: 3,
+    projectName: "PrimeWave Solutions",
+    details:
+      "PrimeWave Solutions – Custom Web Design & Development for Remodelers At PrimeWave Solutions, I specialize in designing and developing responsive, dynamic websites tailored for home remodeling contractors. My goal is to help remodelers like kitchen, bathroom, and cabinet specialists boost their online presence, attract more leads, and grow their business. I focus on creating modern, user-friendly websites that showcase their work and make it easy for potential clients to connect",
+    images: [
+      "/projectsImages/prime1.png",
+      "/projectsImages/prime2.png",
+      "/projectsImages/prime3.png",
+      "/projectsImages/prime4.png",
+    ],
+    metadata: {
+      duration: "1 Weeks",
+      role: "Full Stack Developer",
+      teamSize: 1,
+      completionDate: "October 2024",
+    },
+    keyFeatures: [
+      "Speech-to-Text: Translate spoken words through speech recognition.",
+      "Email JS Integration: Streamline contact form submissions with email forwarding.",
+      "Copy to Clipboard: Easily copy translated text for sharing or reference.",
+      "Admin Dashboard: Manages user messages and platform settings.",
+      "Redux Toolkit & mymemory.translate API: Handles user input, translates text, and stores data.",
+      "Admin Dashboard - User Management: Manages user accounts, feedback, and statistics.",
+      "PDF Text Extraction & Translation: Translate text from uploaded PDF documents.",
+      "Downloadable Translations: Save translated text for offline use.",
+      "Text-to-Speech: Listen to translated text for enhanced accessibility.",
+      "Swipe Functionality: Improves user interaction through swiping gestures.",
+    ],
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Query",
+      "Git",
+      "GitHub",
+      "Vercel",
+    ],
+    links: {
+      liveLink: "https://primewavesolutions.vercel.app",
+      frontend: "",
+      backend: "",
+      nextJS: "",
+    },
+  },
+  {
+    id: 4,
     projectName: "Fintex Fitness",
     details:
       "Log exercises, set personalized goals, and apply for a dedicated trainer. Seamlessly monitor progress, celebrate achievements, and stay motivated on your path to a healthier lifestyle.",
@@ -138,10 +185,11 @@ export const projectsData = [
       liveLink: "https://fintex-fitness-client-code.vercel.app",
       frontend: "https://github.com/naymHdev/Fintex-Fitness-Client-Code",
       backend: "https://github.com/naymHdev/Fintex-Fitness-Server-Code",
+      nextJS: "",
     },
   },
   {
-    id: 4,
+    id: 5,
     projectName: "Web Works Wizards",
     details:
       "This project aims to streamline IT service requests, incident management, and resource allocation within organizations, enhancing operational efficiency and customer satisfaction.",
@@ -182,6 +230,7 @@ export const projectsData = [
       liveLink: "https://web-works-wizards.vercel.app",
       frontend: "https://github.com/naymHdev/WebWorks-Wizards",
       backend: "",
+      nextJS: "",
     },
   },
 ];

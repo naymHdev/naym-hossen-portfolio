@@ -97,37 +97,53 @@ const ProjectDetails = () => {
               </div>
 
               {/* Source Code Links */}
-              <div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-primaryColor mt-8 sm:mt-10 mb-4">
-                  Source Code
-                </h2>
-                <div className="flex flex-wrap gap-4 text-lg sm:text-xl font-bold text-title">
-                  {project.links.frontend && (
-                    <a
-                      className="flex items-center gap-2"
-                      href={project.links.frontend}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaGithub />
-                      Frontend
-                      <FaExternalLinkAlt className="text-primaryColor text-sm" />
-                    </a>
-                  )}
-                  {project.links.backend && (
-                    <a
-                      className="flex items-center gap-2"
-                      href={project.links.backend}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaGithub />
-                      Backend
-                      <FaExternalLinkAlt className="text-primaryColor text-sm" />
-                    </a>
-                  )}
-                </div>
-              </div>
+              {project.links.backend ||
+                project.links.frontend ||
+                (project.links.nextJS && (
+                  <div>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-primaryColor mt-8 sm:mt-10 mb-4">
+                      Source Code
+                    </h2>
+                    <div className="flex flex-wrap gap-4 text-lg sm:text-xl font-bold text-title">
+                      {project.links.frontend && (
+                        <a
+                          className="flex items-center gap-2"
+                          href={project.links.frontend}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaGithub />
+                          Frontend
+                          <FaExternalLinkAlt className="text-primaryColor text-sm" />
+                        </a>
+                      )}
+                      {project.links.backend && (
+                        <a
+                          className="flex items-center gap-2"
+                          href={project.links.backend}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaGithub />
+                          Backend
+                          <FaExternalLinkAlt className="text-primaryColor text-sm" />
+                        </a>
+                      )}
+                      {project.links.nextJS && (
+                        <a
+                          className="flex items-center gap-2"
+                          href={project.links.nextJS}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaGithub />
+                          Next.js
+                          <FaExternalLinkAlt className="text-primaryColor text-sm" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                ))}
             </div>
           ))}
         </section>
