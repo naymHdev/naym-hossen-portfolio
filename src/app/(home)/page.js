@@ -1,4 +1,4 @@
-import AboutUs from "./(pages)/about/page";
+import AboutUs from "./about/page";
 
 export default function Home() {
   return (
