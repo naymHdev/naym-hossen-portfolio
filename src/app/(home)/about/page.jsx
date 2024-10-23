@@ -3,9 +3,11 @@ import Loading from "@/components/Loading/Loading";
 import About from "@/components/Pages/About/About";
 import TicTacToe from "@/components/Games/TicTacToe/TicTacToe";
 import MobileDeviceAbout from "./mobileDeviceAbout";
+import ProfileImage from "@/components/ProfileImage/ProfileImage";
 const AboutUs = () => {
   return (
     <>
+      <ProfileImage />
       <Suspense fallback={<Loading />}>
         <div className="md:hidden flex">
           <MobileDeviceAbout />
