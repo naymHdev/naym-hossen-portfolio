@@ -8,7 +8,7 @@ const ProfileImage = () => {
     <div className="flex items-center justify-start mb-8">
       {/* Animated Card */}
       <motion.div
-        className="relative border border-primaryColor rounded-3xl shadow-2xl bg-[#122b3c]"
+        className="relative rounded-3xl shadow-lg shadow-primaryColor bg-[#122b3c]"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
