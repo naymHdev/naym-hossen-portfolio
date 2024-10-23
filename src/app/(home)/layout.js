@@ -1,22 +1,22 @@
 import localFont from "next/font/local";
-import "./globals.css";
+import "../globals.css";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Sidebar/MobileNavbar/Navbar";
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "../fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 700 900",
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: "../fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
 const geistUbuntu = localFont({
-  src: "./fonts/UbuntuSans-VariableFont_wdth,wght.ttf",
+  src: "../fonts/UbuntuSans-VariableFont_wdth,wght.ttf",
   variable: "--font-geist-ubuntu",
   weight: "100 800",
 });
