@@ -28,9 +28,9 @@ const DashboardLayout = ({ children }) => {
         <body
           className={`${geistSans.variable} ${geistMono.variable} ${geistUbuntu.variable} antialiased`}
         >
-          <div className="h-screen flex">
+          <div className=" min-h-screen flex">
             {/* LEFT */}
-            <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4">
+            <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4 bg-card">
               <Link
                 href="/"
                 className="flex flex-col items-center justify-center lg:justify-start gap-2"
@@ -46,7 +46,7 @@ const DashboardLayout = ({ children }) => {
               <AdminMenus />
             </div>
             {/* RIGHT */}
-            <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-scroll flex flex-col">
+            <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] overflow-scroll flex flex-col p-10">
               {/* <DashBoardSidebar /> */}
               {children}
             </div>
