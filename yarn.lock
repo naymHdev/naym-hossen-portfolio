@@ -2248,6 +2248,11 @@ react-dom@^18:
     loose-envify "^1.1.0"
     scheduler "^0.23.2"
 
+react-google-charts@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-google-charts/-/react-google-charts-5.1.0.tgz#714b509369cb97e083a9fee873634f09c5694766"
+  integrity sha512-9vOz4NU9lBjj9VF0DQQowKyPKQCb53zN7ts6kNCQqngQCrS9DMT9IuSBnCx1ULAU152+x5dDQ3DugSi2OdqgpA==
+
 react-hot-toast@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/react-hot-toast/-/react-hot-toast-2.4.1.tgz#df04295eda8a7b12c4f968e54a61c8d36f4c0994"
