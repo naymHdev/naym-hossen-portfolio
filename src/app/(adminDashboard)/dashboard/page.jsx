@@ -1,7 +1,11 @@
+import Analytics from "@/components/Charts/Analytics/Analytics";
+
 const AdminDashboard = () => {
-  return <>
-  <p>Dashboard Main Page</p>
-  </>;
+  return (
+    <>
+      <Analytics />
+    </>
+  );
 };
 
 export default AdminDashboard;

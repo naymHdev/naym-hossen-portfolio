@@ -80,7 +80,7 @@ const AdminMenus = () => {
                 <div key={item.label}>
                   {/* Main menu item */}
                   <div
-                    className="flex items-center justify-center lg:justify-start gap-3 text-gray-200 py-2 md:px-2 rounded-md hover:text-[#0B1E2C] hover:bg-foreground cursor-pointer"
+                    className="flex items-center justify-center lg:justify-start gap-3 text-foreground py-2 md:px-2 rounded-md hover:text-primaryColor hover:bg-[#1C2E45] cursor-pointer"
                     onClick={() => item.submenu && toggleSubMenu(i.id)}
                   >
                     <div className="text-xl">{item.icon}</div>
@@ -99,7 +99,7 @@ const AdminMenus = () => {
                         <Link
                           href={subItem.href}
                           key={subItem.label}
-                          className="flex hover:text-[#0B1E2C] hover:bg-foreground rounded-md items-center gap-3 text-gray-200 py-2 md:px-2"
+                          className="flex hover:text-primaryColor hover:bg-[#1C2E45] rounded-md items-center gap-3 text-foreground py-2 md:px-2"
                         >
                           <span className="text-xl">{subItem.icon}</span>
                           <span className="hidden lg:block font-semibold">
