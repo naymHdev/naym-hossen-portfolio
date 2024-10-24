@@ -1,11 +1,11 @@
-
+import CreateBlogPost from "@/components/AdminDashboardComponents/CreateBlogPost/CreateBlogPost";
 
 const AddBlog = () => {
-    return (
-        <div>
-            <p>AddBlog</p>
-        </div>
-    );
+  return (
+    <>
+      <CreateBlogPost />
+    </>
+  );
 };
 
 export default AddBlog;

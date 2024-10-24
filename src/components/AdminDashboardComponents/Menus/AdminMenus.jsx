@@ -71,7 +71,7 @@ const AdminMenus = () => {
   ];
 
   return (
-    <div className="mt-4 text-sm h-screen overflow-y-scroll">
+    <div className="mt-4 text-sm h-screen overflow-scroll overflow-y-scroll">
       {menuItems.map((i) => (
         <div className="flex flex-col gap-1" key={i.id}>
           {i.items.map((item) => {
@@ -79,18 +79,20 @@ const AdminMenus = () => {
               return (
                 <div key={item.label}>
                   {/* Main menu item */}
-                  <div
-                    className="flex items-center justify-center lg:justify-start gap-3 text-foreground py-2 md:px-2 rounded-md hover:text-primaryColor hover:bg-[#1C2E45] cursor-pointer"
-                    onClick={() => item.submenu && toggleSubMenu(i.id)}
-                  >
-                    <div className="text-xl">{item.icon}</div>
-                    <span className="hidden lg:block font-semibold">
-                      {item.label}
-                    </span>
-                    <span className=" text-xl">
-                      {item.toggleIcon && item.toggleIcon}
-                    </span>
-                  </div>
+                  <Link href={item.href}>
+                    <div
+                      className="flex items-center justify-center lg:justify-start gap-3 text-foreground py-2 md:px-2 rounded-md hover:text-primaryColor hover:bg-[#1C2E45] cursor-pointer"
+                      onClick={() => item.submenu && toggleSubMenu(i.id)}
+                    >
+                      <div className="text-xl">{item.icon}</div>
+                      <span className="hidden lg:block font-semibold">
+                        {item.label}
+                      </span>
+                      <span className=" text-xl">
+                        {item.toggleIcon && item.toggleIcon}
+                      </span>
+                    </div>
+                  </Link>
 
                   {/* Submenu items */}
                   {item.submenu && openMenu === i.id && (

@@ -46,8 +46,7 @@ const DashboardLayout = ({ children }) => {
               <AdminMenus />
             </div>
             {/* RIGHT */}
-            <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] overflow-scroll flex flex-col p-10">
-              {/* <DashBoardSidebar /> */}
+            <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] overflow-scroll overscroll-y-auto flex flex-col p-10 h-screen">
               {children}
             </div>
           </div>
