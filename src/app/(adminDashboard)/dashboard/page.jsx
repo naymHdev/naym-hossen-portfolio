@@ -1,11 +1,7 @@
-import DashBoardSidebar from "@/components/AdminDashboardComponents/DashBoardSidebar/DashBoardSidebar";
-
 const AdminDashboard = () => {
-  return (
-    <>
-      <DashBoardSidebar />
-    </>
-  );
+  return <>
+  <p>Dashboard Main Page</p>
+  </>;
 };
 
 export default AdminDashboard;

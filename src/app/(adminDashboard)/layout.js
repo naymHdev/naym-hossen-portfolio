@@ -1,5 +1,9 @@
 import localFont from "next/font/local";
 import "../globals.css";
+import DashBoardSidebar from "@/components/AdminDashboardComponents/DashBoardSidebar/DashBoardSidebar";
+import Link from "next/link";
+import Image from "next/image";
+import AdminMenus from "@/components/AdminDashboardComponents/Menus/AdminMenus";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -24,7 +28,29 @@ const DashboardLayout = ({ children }) => {
         <body
           className={`${geistSans.variable} ${geistMono.variable} ${geistUbuntu.variable} antialiased`}
         >
-          <div>{children}</div>
+          <div className="h-screen flex">
+            {/* LEFT */}
+            <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4">
+              <Link
+                href="/"
+                className="flex flex-col items-center justify-center lg:justify-start gap-2"
+              >
+                <Image
+                  src="/images/naym-logo.png"
+                  alt="logo"
+                  width={100}
+                  height={100}
+                />
+                <span className="hidden lg:block font-bold">Naym Hossen</span>
+              </Link>
+              <AdminMenus />
+            </div>
+            {/* RIGHT */}
+            <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-scroll flex flex-col">
+              {/* <DashBoardSidebar /> */}
+              {children}
+            </div>
+          </div>
         </body>
       </html>
     </>
