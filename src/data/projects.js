@@ -141,7 +141,7 @@ export const projectsData = [
       liveLink: "https://primewavesolutions.vercel.app",
       frontend: "",
       backend: "",
-      nextJS: "",
+      nextJS: "https://github.com/naymHdev/primewave-solutions",
     },
   },
   {
