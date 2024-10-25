@@ -3,7 +3,7 @@ import CreateBlogPost from "@/components/AdminDashboardComponents/CreateBlogPost
 const AddBlog = () => {
   return (
     <>
-      <CreateBlogPost />
+      {/* <CreateBlogPost /> */}
     </>
   );
 };
