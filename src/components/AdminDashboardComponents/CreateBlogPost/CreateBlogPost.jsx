@@ -3,6 +3,46 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import axios from "axios";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+import "./blogPost.css";
+
+// Define a custom toolbar
+const modules = {
+  toolbar: {
+    container: [
+      [{ header: "1" }, { header: "2" }, { font: [] }],
+      [{ list: "ordered" }, { list: "bullet" }],
+      ["bold", "italic", "underline", "strike", "blockquote"],
+      [{ color: [] }, { background: [] }],
+      [{ align: [] }],
+      ["link"],
+      ["image"],
+      ["clean"],
+    ],
+    handlers: {
+      image: () => handleImageUpload(),
+    },
+  },
+};
+
+const formats = [
+  "header",
+  "font",
+  "size",
+  "bold",
+  "italic",
+  "underline",
+  "strike",
+  "blockquote",
+  "list",
+  "bullet",
+  "indent",
+  "link",
+  "color",
+  "background",
+  "align",
+];
 
 export const categories = [
   { value: "programmingLanguages", label: "Programming Languages" },
@@ -52,22 +92,20 @@ export const categories = [
 ];
 
 const CreateBlogPost = () => {
+  const [content, setContent] = useState("");
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const [status, setStatus] = useState("draft"); // Blog post status
 
   const onSubmit = async (data) => {
-    console.log("blog__data", data);
-    // Post form data to your Next.js API route
-    // try {
-    //   const response = await axios.post("/api/blog-posts", { ...data, status });
-    //   console.log("Blog post created:", response.data);
-    // } catch (error) {
-    //   console.error("Error creating blog post:", error);
-    // }
+    try {
+      await axios.post("/api/blog-posts", { ...data, content });
+      console.log("Blog post created successfully");
+    } catch (error) {
+      console.error("Error creating blog post:", error);
+    }
   };
 
   return (
@@ -84,24 +122,24 @@ const CreateBlogPost = () => {
           <input
             type="text"
             {...register("title", { required: true })}
-            className="w-full p-2 border-b bg-transparent focus:outline-none border-foreground"
+            className="w-full p-2 border-b bg-transparent focus:outline-none border-primaryColor"
           />
           {errors.title && <p className="text-red-500">Title is required</p>}
         </div>
 
         {/* Blog Post Content */}
         <div>
-          <label htmlFor="content" className="block text-lg text-white">
+          <label htmlFor="content" className="block text-white mb-2">
             Blog Content
           </label>
-          <textarea
-            {...register("content", { required: true })}
-            className="w-full p-2 border bg-transparent focus:outline-none border-foreground"
-            rows="10"
-          ></textarea>
-          {errors.content && (
-            <p className="text-red-500">Content is required</p>
-          )}
+          <ReactQuill
+            theme="snow"
+            value={content}
+            onChange={setContent}
+            modules={modules}
+            formats={formats}
+            placeholder="Write your blog content here..."
+          />
         </div>
 
         {/* Blog Featured Image */}
@@ -112,7 +150,7 @@ const CreateBlogPost = () => {
           <input
             type="text"
             {...register("featuredImage", { required: true })}
-            className="w-full p-2 border-b bg-transparent focus:outline-none border-foreground"
+            className="w-full p-2 border-b bg-transparent focus:outline-none border-primaryColor"
           />
           {errors.featuredImage && (
             <p className="text-red-500">Image URL is required</p>
@@ -127,7 +165,7 @@ const CreateBlogPost = () => {
           <input
             type="text"
             {...register("slug", { required: true })}
-            className="w-full p-2 border-b bg-transparent focus:outline-none border-foreground"
+            className="w-full p-2 border-b bg-transparent focus:outline-none border-primaryColor"
           />
           {errors.slug && <p className="text-red-500">Slug is required</p>}
         </div>
@@ -139,7 +177,7 @@ const CreateBlogPost = () => {
           </label>
           <select
             {...register("categories", { required: true })}
-            className="w-full p-2 border-b bg-transparent focus:outline-none border-foreground"
+            className="w-full p-2 border-b bg-transparent focus:outline-none border-primaryColor"
           >
             <option value="" disabled>
               Select a Category
@@ -165,7 +203,7 @@ const CreateBlogPost = () => {
             type="text"
             {...register("tags", { required: true })}
             placeholder="Separate tags with commas"
-            className="w-full p-2 border-b bg-transparent focus:outline-none border-foreground"
+            className="w-full p-2 border-b bg-transparent focus:outline-none border-primaryColor"
           />
           {errors.tags && <p className="text-red-500">Tags are required</p>}
         </div>
@@ -178,7 +216,7 @@ const CreateBlogPost = () => {
           <input
             type="date"
             {...register("dateCreated", { required: true })}
-            className="w-full p-2 border-b bg-transparent focus:outline-none border-foreground"
+            className="w-full p-2 border-b bg-transparent focus:outline-none border-primaryColor"
           />
           {errors.dateCreated && (
             <p className="text-red-500">Date is required</p>
@@ -192,8 +230,7 @@ const CreateBlogPost = () => {
           </label>
           <select
             {...register("status", { required: true })}
-            onChange={(e) => setStatus(e.target.value)}
-            className="w-full p-2 border-b bg-transparent focus:outline-none border-foreground"
+            className="w-full p-2 border-b bg-transparent focus:outline-none border-primaryColor"
           >
             <option value="draft">Draft</option>
             <option value="published">Published</option>
@@ -208,7 +245,7 @@ const CreateBlogPost = () => {
           <input
             type="text"
             {...register("author", { required: true })}
-            className="w-full p-2 border-b bg-transparent focus:outline-none border-foreground"
+            className="w-full p-2 border-b bg-transparent focus:outline-none border-primaryColor"
           />
           {errors.author && <p className="text-red-500">Author is required</p>}
         </div>
@@ -220,7 +257,7 @@ const CreateBlogPost = () => {
           </label>
           <textarea
             {...register("excerpt", { required: true })}
-            className="w-full p-2 border-b bg-transparent focus:outline-none border-foreground"
+            className="w-full p-2 border-b bg-transparent focus:outline-none border-primaryColor"
             rows="3"
           ></textarea>
           {errors.excerpt && (

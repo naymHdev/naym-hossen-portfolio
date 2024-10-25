@@ -1,0 +1,38 @@
+/* Custom styles for ReactQuill */
+
+/* Toolbar Styling */
+.ql-toolbar {
+    background-color: #f0f4f8; /* Light background for toolbar */
+    border: 1px solid #ccc; /* Border for the toolbar */
+    padding: 10px;
+  }
+  
+  /* Editor Container Styling */
+  .ql-container {
+    background-color: #fdfdfd; /* Light background for the editor */
+    border: 1px solid #ccc; /* Border for the editor */
+    /* border-radius: 5px; */
+  }
+  
+  /* Content Area Styling */
+  .ql-editor {
+    min-height: 300px; /* Minimum height of the content area */
+    font-family: 'Arial', sans-serif; /* Custom font for the editor */
+    color: #333; /* Text color */
+    line-height: 1.6;
+  }
+  
+  /* Customize toolbar buttons */
+  .ql-toolbar .ql-stroke {
+    stroke: #0055ff; /* Customize the stroke color of toolbar icons */
+  }
+  
+  .ql-toolbar .ql-fill {
+    fill: #0055ff; /* Customize the fill color of toolbar icons */
+  }
+  
+  /* Custom focus state for the editor */
+  .ql-container.ql-snow {
+    border-color: #0055ff; /* Change border color on focus */
+  }
+  
