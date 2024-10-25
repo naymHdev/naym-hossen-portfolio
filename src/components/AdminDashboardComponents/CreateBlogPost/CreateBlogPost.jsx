@@ -3,47 +3,8 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import axios from "axios";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
 import "./blogPost.css";
-
-// Define a custom toolbar
-const modules = {
-  toolbar: {
-    container: [
-      [{ header: "1" }, { header: "2" }, { font: [] }],
-      [{ list: "ordered" }, { list: "bullet" }],
-      ["bold", "italic", "underline", "strike", "blockquote"],
-      [{ color: [] }, { background: [] }],
-      [{ align: [] }],
-      ["link"],
-      ["image"],
-      ["clean"],
-    ],
-    handlers: {
-      image: () => handleImageUpload(),
-    },
-  },
-};
-
-const formats = [
-  "header",
-  "font",
-  "size",
-  "bold",
-  "italic",
-  "underline",
-  "strike",
-  "blockquote",
-  "list",
-  "bullet",
-  "indent",
-  "link",
-  "color",
-  "background",
-  "align",
-];
-
+import Editor from "./Editor";
 export const categories = [
   { value: "programmingLanguages", label: "Programming Languages" },
   { value: "webDevelopment", label: "Web Development" },
@@ -92,7 +53,13 @@ export const categories = [
 ];
 
 const CreateBlogPost = () => {
-  const [content, setContent] = useState("");
+  const [postContent, setPostContent] = useState(null);
+
+  const handleSave = (data) => {
+    setPostContent(data);
+    console.log("Post content saved:", data);
+  };
+
   const {
     register,
     handleSubmit,
@@ -101,7 +68,7 @@ const CreateBlogPost = () => {
 
   const onSubmit = async (data) => {
     try {
-      await axios.post("/api/blog-posts", { ...data, content });
+      await axios.post("/api/blog-posts", { ...data });
       console.log("Blog post created successfully");
     } catch (error) {
       console.error("Error creating blog post:", error);
@@ -132,14 +99,17 @@ const CreateBlogPost = () => {
           <label htmlFor="content" className="block text-white mb-2">
             Blog Content
           </label>
-          <ReactQuill
-            theme="snow"
-            value={content}
-            onChange={setContent}
-            modules={modules}
-            formats={formats}
-            placeholder="Write your blog content here..."
-          />
+          <div>
+            <Editor onSave={handleSave} />
+            {postContent && (
+              <div className="mt-8">
+                <h2 className="text-xl font-bold">Saved Content Preview</h2>
+                <pre className="bg-gray-100 p-4 rounded mt-2">
+                  {JSON.stringify(postContent, null, 2)}
+                </pre>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Blog Featured Image */}

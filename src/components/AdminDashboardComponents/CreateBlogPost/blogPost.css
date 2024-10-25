@@ -1,38 +1,35 @@
-/* Custom styles for ReactQuill */
+/* styling button */
+#toggle-edit-btn {
+	background-color: #4267b2;
+	border: 1px solid #4267b2;
+	border-radius: 0.3rem;
+	color: #fff;
+	padding: 1rem 2rem;
+	font-size: 1.2rem;
+	margin: 2rem auto;
+}
 
-/* Toolbar Styling */
-.ql-toolbar {
-    background-color: #f0f4f8; /* Light background for toolbar */
-    border: 1px solid #ccc; /* Border for the toolbar */
-    padding: 10px;
-  }
-  
-  /* Editor Container Styling */
-  .ql-container {
-    background-color: #fdfdfd; /* Light background for the editor */
-    border: 1px solid #ccc; /* Border for the editor */
-    /* border-radius: 5px; */
-  }
-  
-  /* Content Area Styling */
-  .ql-editor {
-    min-height: 300px; /* Minimum height of the content area */
-    font-family: 'Arial', sans-serif; /* Custom font for the editor */
-    color: #333; /* Text color */
-    line-height: 1.6;
-  }
-  
-  /* Customize toolbar buttons */
-  .ql-toolbar .ql-stroke {
-    stroke: #0055ff; /* Customize the stroke color of toolbar icons */
-  }
-  
-  .ql-toolbar .ql-fill {
-    fill: #0055ff; /* Customize the fill color of toolbar icons */
-  }
-  
-  /* Custom focus state for the editor */
-  .ql-container.ql-snow {
-    border-color: #0055ff; /* Change border color on focus */
-  }
-  
+#toggle-edit-btn:focus,
+#toggle-edit-btn:hover {
+	cursor: pointer;
+}
+
+/* styling app content container */
+.app-content {
+	margin: 1rem auto;
+	width: 80%;
+	padding: 5%;
+	background-color: #f4f5f9;
+}
+
+/* styling alert text when edit mode is enabled */
+.edit-mode-alert {
+	text-decoration: underline;
+	color: #c80000;
+}
+
+/* styling text parsed */
+.text-container > *,
+.editor-container > * {
+	text-align: left;
+}
