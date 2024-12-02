@@ -53,7 +53,9 @@ const GetInTouch = () => {
               </div>
               <div className="flex items-center gap-3 text-lg">
                 <HiOutlineMail className="text-xl text-primaryColor" />
-                <p className="text-foreground font-medium">naymhossen09@gmail.com</p>
+                <p className="text-foreground font-medium">
+                  naymhossen09@gmail.com
+                </p>
               </div>
               <div className="flex items-center gap-3 text-lg">
                 <BsGeoAlt className="text-xl text-primaryColor" />
