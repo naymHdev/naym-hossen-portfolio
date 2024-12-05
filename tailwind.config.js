@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         ubuntu: ["var(--font-geist-ubuntu)", "sans-serif"],
+        sourceCode: ["var(--font-geist-sourceCode)", "sans-serif"],
       },
       colors: {
         background: "var(--background)",

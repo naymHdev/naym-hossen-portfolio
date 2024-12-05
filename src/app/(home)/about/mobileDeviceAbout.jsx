@@ -16,7 +16,7 @@ const MobileDeviceAbout = () => {
           <p className=" text-xl md:text-2xl font-medium md:font-bold mt-1 md:mt-2 text-foreground">
             Full-Stack Web Developer
           </p>
-          <p className=" mt-6 font-mono text-foreground">
+          <p className=" mt-6 font-sourceCode text-foreground">
             Full Stack Developer with 1+ years of MERN stack expertise, building
             responsive, scalable web applications.
           </p>

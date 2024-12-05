@@ -12,9 +12,9 @@ const AboutUs = () => {
         <div className="md:hidden flex">
           <MobileDeviceAbout />
         </div>
-        <div className=" grid grid-cols-1 md:grid-cols-7 gap-4 mt-16 md:mt-0">
+        <div className=" grid grid-cols-1 md:grid-cols-7 gap-4 mt-16 md:mt-10">
           <div className="col-span-full md:col-span-4">
-            <p className=" text-foreground font-medium font-mono">
+            <p className=" text-foreground font-semibold text-lg font-sourceCode">
               My journey in web development is driven by a diverse range of
               advanced tools and languages, with JavaScript at the core of my
               expertise. I proficiently utilize frameworks like React.js and

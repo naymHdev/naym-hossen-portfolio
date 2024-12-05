@@ -21,6 +21,12 @@ const geistUbuntu = localFont({
   weight: "100 800",
 });
 
+const sourceCodePro = localFont({
+  src: "../fonts/SourceCodePro-VariableFont_wght.ttf",
+  variable: "--font-geist-sourceCode",
+  weight: "100 800",
+});
+
 export const metadata = {
   title: "Naym Hossen - Full Stack Developer Portfolio",
   description:
@@ -30,13 +36,13 @@ export const metadata = {
   author: "Naym Hossen",
   openGraph: {
     type: "website",
-    url: "https://your-portfolio-url.com", // Replace with actual URL
+    url: "https://naymhossen.vercel.app",
     title: "Naym Hossen - Full Stack Developer",
     description:
       "Discover projects and achievements of Naym Hossen, a passionate MERN Stack developer.",
     images: [
       {
-        url: "/images/portfolio-cover.jpg", // Replace with actual image path
+        url: "/images/portfolio cover.png",
         width: 800,
         height: 600,
         alt: "Portfolio Cover",
@@ -49,9 +55,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${geistUbuntu.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${geistUbuntu.variable} ${sourceCodePro.variable} antialiased`}
       >
-        <div className=" grid grid-cols-1 md:grid-cols-5 ">
+        <div className=" grid grid-cols-1 md:grid-cols-5">
           <div className="col-span-full lg:col-span-2 lg:h-screen">
             <div className="hidden md:flex py-4 sm:py-6 lg:py-8">
               <Sidebar />
